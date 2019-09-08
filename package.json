@@ -1,0 +1,14 @@
+{
+  "name": "generator-cmake",
+  "version": "0.1.0",
+  "description": "A simple but powerful CMake buildsystem generator",
+  "files": [
+    "generators"
+  ],
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "yeoman-generator": "^1.1.1"
+  }
+}

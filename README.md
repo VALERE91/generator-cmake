@@ -1,0 +1,2 @@
+# CMake Yeoman generator
+
