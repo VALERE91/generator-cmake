@@ -55,8 +55,8 @@ module.exports = class extends Generator
         //Files
         this.fs.copy(this.templatePath('.clang-format'),this.destinationPath('.clang-format'));
         this.fs.copy(this.templatePath('.clang-tidy'),this.destinationPath('.clang-tidy'));
-        this.fs.copy(this.templatePath('.gitattributes'),this.destinationPath('.gitattributes'));
-        this.fs.copy(this.templatePath('.gitignore'),this.destinationPath('.gitignore'));
+        this.fs.copy(this.templatePath('gitattributes'),this.destinationPath('.gitattributes'));
+        this.fs.copy(this.templatePath('gitignore'),this.destinationPath('.gitignore'));
         this.fs.copy(this.templatePath('LICENSE'),this.destinationPath('LICENSE'));
         this.fs.copy(this.templatePath('README.md'),this.destinationPath('README.md'));
 
