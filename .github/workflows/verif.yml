@@ -1,0 +1,22 @@
+name: Verification build
+
+on: [push]
+
+jobs:
+  build:
+    name: "Environment installation"
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/setup-node@master
+    - uses: actions/checkout@v1
+    - name: Install npm
+      run: npm install
+    - name: Install yeoman
+      run: sudo npm install -g yo
+    - name: Link generator
+      run: sudo npm link
+    - name: Check installation
+      run: |
+        mkdir test
+        cd test
+        yo cmake --name TestCmake --desc "A simple CMake" --gsl
