@@ -1,6 +1,6 @@
 # CMake Yeoman generator
 
-This simple [Yeoman](https://yeoman.io/) generator creates a C++ project with CMake. It  You can install yeoman with :
+This simple [Yeoman](https://yeoman.io/) generator creates a C++ project with CMake and Hunter for librairies management. It  You can install yeoman with :
 
 ```
 npm install -g yo
