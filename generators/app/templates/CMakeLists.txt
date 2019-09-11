@@ -34,11 +34,15 @@ add_subdirectory(external)
 #Main project
 add_subdirectory(main)
 
+<% if (test_enabled) { %>
 #Test project
 enable_testing()
 include(CTest)
 add_subdirectory(test)
+<% } %>
 
+<% if (cpack_enabled) { %>
 #CPack
 include(cmake/Install.cmake)
 include(CPack)
+<% } %>

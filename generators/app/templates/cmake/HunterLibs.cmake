@@ -6,3 +6,8 @@ find_package(Microsoft.GSL CONFIG REQUIRED)
 #Link the library for all the projects
 link_libraries(Microsoft.GSL::GSL)
 <% } %>
+
+<% if (test_enabled) { %>
+#GSL from Microsoft project wide integrtation
+hunter_add_package(GTest)
+<% } %>

@@ -32,6 +32,16 @@ module.exports = class extends Generator
                 type: "confirm",
                 name: "gsl_enabled",
                 message: "Enable GSL in your project? (You should say yes)"
+            },
+            {
+                type: "confirm",
+                name: "test_enabled",
+                message: "Enable testing framework?"
+            },
+            {
+                type: "confirm",
+                name: "cpack_enabled",
+                message: "Enable CPack?"
             }
         ]);
     }
@@ -50,7 +60,11 @@ module.exports = class extends Generator
         this.fs.copy(this.templatePath('external'),this.destinationPath('external'));
         this.fs.copy(this.templatePath('main'),this.destinationPath('main'));
         this.fs.copy(this.templatePath('resources'),this.destinationPath('resources'));
-        this.fs.copy(this.templatePath('test'),this.destinationPath('test'));
+
+        if(this.answers.test_enabled)
+        {
+            this.fs.copy(this.templatePath('test'),this.destinationPath('test'));
+        }
 
         //Files
         this.fs.copy(this.templatePath('.clang-format'),this.destinationPath('.clang-format'));
