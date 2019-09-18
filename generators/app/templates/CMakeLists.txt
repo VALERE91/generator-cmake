@@ -7,9 +7,9 @@ HunterGate(
     SHA1 "e14bc153a7f16d6a5eeec845fb0283c8fad8c358"
 )
 
-project(<%= project_name %> 
+project(<%= project.name %> 
         VERSION 0.0
-        DESCRIPTION "<%= project_description %>"
+        DESCRIPTION "<%= project.description %>"
         LANGUAGES CXX C)
             
 set(CMAKE_CXX_STANDARD 17)
@@ -34,14 +34,14 @@ add_subdirectory(external)
 #Main project
 add_subdirectory(main)
 
-<% if (test_enabled) { %>
+<% if (external.libs.CTest) { %>
 #Test project
 enable_testing()
 include(CTest)
 add_subdirectory(test)
 <% } %>
 
-<% if (cpack_enabled) { %>
+<% if (external.libs.CPack) { %>
 #CPack
 include(cmake/Install.cmake)
 include(CPack)

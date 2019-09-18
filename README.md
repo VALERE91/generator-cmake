@@ -17,7 +17,7 @@ now all you have to do is call the generator :
 ```
 mkdir my-project
 cd my-project
-yo cmake
+yo cmake generate
 ```
 
 ## Project architecture

@@ -1,4 +1,4 @@
-<% if (gsl_enabled) { %>
+<% if (external.libs.GSL) { %>
 #GSL from Microsoft project wide integrtation
 hunter_add_package(Microsoft.GSL)
 #Find librairies loaded by hunter
@@ -7,7 +7,7 @@ find_package(Microsoft.GSL CONFIG REQUIRED)
 link_libraries(Microsoft.GSL::GSL)
 <% } %>
 
-<% if (test_enabled) { %>
+<% if (external.libs.CTest) { %>
 #GSL from Microsoft project wide integrtation
 hunter_add_package(GTest)
 <% } %>

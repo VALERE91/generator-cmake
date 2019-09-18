@@ -19,4 +19,4 @@ jobs:
       run: |
         mkdir test
         cd test
-        yo cmake --name TestCmake --desc "A simple CMake" --gsl
+        yo cmake generate --name TestCmake --desc "A simple CMake" --gsl
